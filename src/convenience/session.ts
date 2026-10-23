@@ -572,7 +572,7 @@ export interface Migrations {
  * @returns The enhanced storage adapter
  */
 export function enhanceStorage<T>(
-    options: MigrationOptions<T> | CompressionOptions,
+    options: MigrationOptions<T>,
 ): StorageAdapter<T> {
     const { millisecondsToLive, migrations } = options;
     let storage: StorageAdapter<Enhance<T>> = options.compress
